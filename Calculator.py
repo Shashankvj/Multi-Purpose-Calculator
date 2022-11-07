@@ -8,10 +8,14 @@ def main():
 5.Exit""")
     
     while True:
+
         cho=input("\nChoose a operation (1/2/3/4/5) :")
+        cho=cho.strip()
+
         if cho not in ('1', '2', '3', '4', '5'):
                  print("\nInvalid Choice")
                  continue
+
         else:
              break
 
@@ -31,69 +35,32 @@ def main():
             exit
         
 def math():
+
     while True:
+
         try:
-                    n1=input("Enter calculation you want : ") 
-                    print("result",eval(n1))
-                    break
-        except Exception :
-                    print("Number only")
-    
-    '''print("""\nSelect Operation\n
-1.Addition
-2.Subtraction
-3.Multiply
-4.Divide
-5.Remainder""")
-
-    while True:
-        choice=input("\nChoose a Operation (1/2/3/4/5) : ")
-        if choice not in ('1', '2', '3', '4', '5'):
-                 print("\nInvalid Choice")
-                 continue
-        else:
-            break
-
-    while True:
-            
-            try:
-                n1=float(input("\nEnter a Number: "))
+                n1=input("Enter calculation you want : ")
+                n1=n1.strip()
+                print("result",eval(n1))
                 break
-            except ValueError:
+        except Exception :
                 print("Number only")
-
+    
+    
     while True:
-             
-             try:
-                 n2=float(input("\nEnter another Number:"))
-                 break
-             except ValueError:
-                 print("Number only")
-   
-    if choice =='1':
-             print(n1,"+",n2,"=", float(n1)+float(n2))
 
-    elif choice =='2':
-             print(n1,"-",n2,"=",float(n1)-float(n2))
-
-    elif choice =='3':
-             print(n1,"*",n2,"=",float(n1)*float(n2))
-
-    elif choice =='4':
-             print(n1,"/",n2,"=",float(n1)/float(n2))
-
-    elif choice =='5':
-             print(n1,"%",n2,"=",float(n1)%float(n2))'''                     
-
-    while True:
         say=input("\nLet's do next calculation? (yes/no) : ")
+        say=say.strip()
+
         if say not in ('yes', 'no'):
           print("\nInvalid choice")
           continue
+
         else:
             if say=='yes':
                 math()
                 break
+
             if say =="no":
                 main()
                 break
@@ -101,33 +68,37 @@ def math():
 def BMI():
     
     while True:
-        n3=input("\nEnter your weight in kg : ")
+        
         try:
-            n3=abs(float(n3))
+            n3=abs(float(input("\nEnter your weight in kg : ")))
             break
-        except ValueError:
+        except Exception:
             print("Numbers only")
 
     while True:
-        n4=input("\nEnter your height in cm : ") 
+
         try:
-            n4=abs(float(n4))
+            n4=abs(float(input("\nEnter your height in cm : ")))
             break
-        except ValueError:
+        except Exception:
             print("Numbers only")  
 
-    print("\nYour BMI is : ",float(n3)/((float(n4)*float(n4))/10000))
+    print("\nYour BMI is : ",(n3)/(((n4)*(n4))/10000))
 
     while True:
+
              say=input("\nLet's do next calculation? (yes/no) : ")
-            # say=say.strip()
+             say=say.strip()
+
              if say not in ('yes', 'no'):
                  print("\nInvalid choice")
                  continue
+
              else:
                 if say=='yes':
                   BMI()
                   break
+
                 if say =="no":
                   main()
                   break
@@ -139,46 +110,53 @@ def temp():
 2.Celsius to fahrenheit""")
 
     while True:
+
         op=input("\nChoose a operation (1/2) :")
+        op=op.strip()
+
         if op not in ('1', '2'):
                print("\nInvalid Choice")
                continue
+
         else:
             break
 
     if op=='1':
 
            while True:
-               n5=input("\nEnter Fahrenheit : ")
+
                try:
-                   n5=float(n5)
+                   n5=float(input("\nEnter Fahrenheit : "))
+                   print("\nCelsius will be : ",(((n5)-32)*5)/9)
                    break
-               except ValueError:
+               except Exception:
                    print("Numbers only")
 
-           print("\nCelsius will be : ",((float(n5)-32)*5)/9)      
-       
     if op=='2':
 
            while True:
-               n6=input("\nEnter Celsius : ")
+
                try:
-                   n6=float(n6)
+                   n6=float(input("\nEnter Celsius : "))
+                   print("\nFahrenheit will be : ",((n6)*1.8)+32)
                    break
-               except ValueError:
+               except Exception:
                    print("Numbers only")
 
-           print("\nFahrenheit will be : ",(float(n6)*1.8)+32)
-
     while True:
+
         say=input("\nLet's do next calculation? (yes/no) : ")
+        say=say.strip()
+
         if say not in ('yes', 'no'):
           print("\nInvalid choice")
           continue
+
         else:
             if say=='yes':
                 temp()
                 break
+
             if say =="no":
                 main()
                 break          
@@ -193,113 +171,120 @@ def area ():
 5.Parallelogram""")
 
     while True:
+
         ar=input("\nChoose a operation (1/2/3/4/5) :")
+        ar=ar.strip()
+
         if ar not in ('1', '2', '3', '4', '5'):
                  print("\nInvalid Choice")
                  continue
+
         else:
             break
 
     if ar=='1':
 
          while True:
-             n7=input("\nEnter Length:")
+
              try:
-                 n7=abs(float(n7))
+                 n7=abs(float(input("\nEnter Length:")))
                  break
-             except ValueError:
+             except Exception:
                  print("Numbers only")
 
          while True:
-             n8=input("\nEnter Breadth:")
+
              try:
-                 n8=abs(float(n8))
+                 n8=abs(float(input("\nEnter Breadth:")))
                  break
-             except ValueError:
+             except Exception:
                  print("Numbers only")
                  
-         print("\nArea will be : ",float(n7)*float(n8))
+         print("\nArea will be : ",(n7)*(n8))
    
     if ar=='2':
 
          while True:
-             a1=input("\nEnter Side:")
+
              try:
-                 a1=abs(float(a1))
+                 a1=abs(float(input("\nEnter Side:")))
+                 print("\nArea will be : ",(a1)*(a1))
                  break
-             except ValueError:
+             except Exception:
                  print("Numbers only")
                  
-         print("\nArea will be : ",float(a1)*float(a1))
-            
     if ar=='3':
 
          while True:
-             a2=input("\nEnter Height:")
+
              try:
-                 a2=abs(float(a2))
+                 a2=abs(float(input("\nEnter Height:")))
                  break
-             except ValueError:
+             except Exception:
                  print("Numbers only")
                  
          while True:
-             a3=input("\nEnter Base:")
+
              try:
-                 a3=abs(float(a3))
+                 a3=abs(float(input("\nEnter Base:")))
                  break
-             except ValueError:
+             except Exception:
                  print("Numbers only")
                  
-         print("\nArea will be : ",(float(a2)*float(a3))/2)
+         print("\nArea will be : ",((a2)*(a3))/2)
            
     if ar=='4':
 
          while True:
-             a4=input("\nEnter Radius:")
+
              try:
-                 a4=abs(float(a4))
+                 a4=abs(float(input("\nEnter Radius:")))
+                 print("\nArea will be : ",3.14*((a4)*(a4)))
                  break
-             except ValueError:
+             except Exception:
                  print("Numbers only")
                  
-         print("\nArea will be : ",3.14*(float(a4)*float(a4)))
-         
     if ar=='5':
 
          while True:
-             a5=input("\nEnter Height:")
+
              try:
-                 a5=abs(float(a5))
+                 a5=abs(float(input("\nEnter Height:")))
                  break
-             except ValueError:
+             except Exception:
                  print("Numbers only")
                  
          while True:
-             a6=input("\nEnter Base:")
+
              try:
-                 a6=abs(float(a6))
+                 a6=abs(float(input("\nEnter Base:")))
                  break
-             except ValueError:
+             except Exception:
                  print("Numbers only")
                  
-         print("\nArea will be : ",float(a5)*float(a6))
+         print("\nArea will be : ",(a5)*(a6))
 
     while True:
+
         say=input("\nLet's do next calculation? (yes/no) : ")
+        say=say.strip()
+
         if say not in ('yes', 'no'):
           print("\nInvalid choice")
           continue
+
         else:
             if say=='yes':
                 area()
                 break
+
             if say =="no":
                 main()
                 break
 
 main()
 print("\nI Love You")
-print("Neha")
+
 
 
 
