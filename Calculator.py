@@ -5,14 +5,15 @@ def main():
 2.BMI 
 3.Temperature
 4.Areas
-5.Exit""")
+5.Factorial
+6.Exit""")
     
     while True:
 
-        cho=input("\nChoose a operation (1/2/3/4/5) :")
+        cho=input("\nChoose a operation (1/2/3/4/5/6) :")
         cho=cho.strip()
 
-        if cho not in ('1', '2', '3', '4', '5'):
+        if cho not in ('1', '2', '3', '4', '5', '6'):
                  print("\nInvalid Choice")
                  continue
 
@@ -32,6 +33,9 @@ def main():
             area()
 
     if cho =='5':
+            factorial()
+
+    if cho =='6':
             exit
         
 def math():
@@ -265,22 +269,50 @@ def area ():
          print("\nArea will be : ",(a5)*(a6))
 
     while True:
-
+     
         say=input("\nLet's do next calculation? (yes/no) : ")
         say=say.strip()
-
+       
         if say not in ('yes', 'no'):
           print("\nInvalid choice")
           continue
-
+      
         else:
             if say=='yes':
                 area()
                 break
-
+          
             if say =="no":
                 main()
                 break
+
+def factorial():
+
+        m=0
+        fac=0
+        k=0
+       
+        while True:
+
+             try:
+                 fa=float(input("Enter a number"))
+                 k=fa
+                 break
+             except Exception:
+                 print("Numbers only")
+
+        while True:
+                     m=k-1
+                     fac=m*k
+                     if fa=='0':
+                         print("\nFactorial of",fa,"is",fac)
+                         break
+                     
+       
+  
+
+
+
 
 main()
 print("\nI Love You")
