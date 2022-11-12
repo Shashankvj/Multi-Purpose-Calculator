@@ -308,12 +308,6 @@ def factorial():
                          print("\nFactorial of",fa,"is",fac)
                          break
                      
-       
-  
-
-
-
-
 main()
 print("\nI Love You")
 
